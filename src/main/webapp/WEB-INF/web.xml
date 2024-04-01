@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>webApp</display-name>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        </welcome-file-list>
+        
+      <!-- Declaration of RoomSearchServlet -->
+    <servlet>
+        <servlet-name>RoomSearchServlet</servlet-name>
+        <servlet-class>com.yourpackage.RoomSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoomSearchServlet</servlet-name>
+        <url-pattern>/searchRooms</url-pattern>
+    </servlet-mapping>
+
+    <!-- Declaration of BookingServlet -->
+    <servlet>
+        <servlet-name>BookingServlet</servlet-name>
+        <servlet-class>com.yourpackage.BookingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookingServlet</servlet-name>
+        <url-pattern>/bookRoom</url-pattern>
+    </servlet-mapping>
+
+    <!-- Declaration of LoginServlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.yourpackage.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+     <!-- AvailableRoomsPerAreaServlet Mapping -->
+    <servlet>
+        <servlet-name>AvailableRoomsPerAreaServlet</servlet-name>
+        <servlet-class>com.yourcompany.ehotels.servlets.AvailableRoomsPerAreaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AvailableRoomsPerAreaServlet</servlet-name>
+        <url-pattern>availableRoomsPerArea</url-pattern>
+    </servlet-mapping>
+
+    <!-- HotelCapacityServlet Mapping -->
+    <servlet>
+        <servlet-name>HotelCapacityServlet</servlet-name>
+        <servlet-class>com.yourcompany.ehotels.servlets.HotelCapacityServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HotelCapacityServlet</servlet-name>
+        <url-pattern>hotelCapacity</url-pattern>
+    </servlet-mapping>
+
+    </web-app>
